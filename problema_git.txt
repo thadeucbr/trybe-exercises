@@ -51,3 +51,4 @@ A lista Ã© bem extensa, esses foram apenas alguns exemplos.
 #9 Mesmo com a técnologia evoluindo todos os dias o Shell Script ainda é utilizado como base!
 
 #10 Desafiar suas habilidades!teste
+nova linha!
