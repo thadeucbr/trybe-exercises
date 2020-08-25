@@ -1,0 +1,15 @@
+.informacoesGerais {
+  background-image: url("olhos-visao-incrivel-camarao-mantis.jpg");
+  color: white;
+  text-align: left;
+  font-weight: bolder;
+  height: 400px;
+}
+.informacoesGerais p {
+  background-color: white;
+}
+table {
+  border: 1px solid black;
+  margin-top: 10px;
+  float: right;
+}
