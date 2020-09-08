@@ -81,6 +81,22 @@
       let divRightContent = document.createElement('div');
       divRightContent.className = 'right-content';
       divMainContent.appendChild(divRightContent);
+
+      let imagem = document.createElement('img');
+      imagem.src = 'https://picsum.photos/200';
+      imagem.className = 'small-image';
+      divLeftContent.appendChild(imagem);
+
+      let lista = document.createElement('ul');
+      let item = ['um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez'];
+      for(let i = 0; i < item.length; i += 1){
+        let li = item[i];
+
+        let itemLista = document.createElement('li');
+        itemLista.innerText = li;
+        lista.appendChild(itemLista);
+      }
+      divRightContent.appendChild(lista);
     </script>
   </body>
 </html>
