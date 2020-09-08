@@ -73,6 +73,14 @@
       let paragrafoCenterContent = document.createElement('p');
       paragrafoCenterContent.innerText = 'Esse é o paragrafo da div central';
       divCenterContent.appendChild(paragrafoCenterContent);
+
+      let divLeftContent = document.createElement('div');
+      divLeftContent.className = 'left-content';
+      divMainContent.appendChild(divLeftContent);
+
+      let divRightContent = document.createElement('div');
+      divRightContent.className = 'right-content';
+      divMainContent.appendChild(divRightContent);
     </script>
   </body>
 </html>
