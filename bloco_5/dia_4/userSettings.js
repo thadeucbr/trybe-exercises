@@ -4,9 +4,10 @@ document.querySelector('body').style.color = localStorage.getItem(
 	'userFontColor'
 );
 document.querySelector('body').style.backgroundColor = localStorage.getItem(
-	'backgroundColor'
+	'userBackgroundColor'
 );
 document.querySelector('body').style.lineHeight = localStorage.getItem('userLineHeight');
+document.querySelector('#user-reset-settings').style.backgroundColor = localStorage.getItem('userBackgroundColor');
 for (
 	let index = 0;
 	index < document.getElementsByTagName('input').length;
@@ -14,7 +15,7 @@ for (
 ) {
 	document.querySelectorAll('input')[
 		index
-	].style.backgroundColor = localStorage.getItem('backgroundColor');
+	].style.backgroundColor = localStorage.getItem('userBackgroundColor');
 }
 let userBackgroundColor = document.getElementById('user-background-color');
 userBackgroundColor.addEventListener('keyup', function () {
@@ -25,9 +26,10 @@ userBackgroundColor.addEventListener('keyup', function () {
 	) {
 		document.getElementsByTagName('input')[index].style.backgroundColor =
 			userBackgroundColor.value;
-		localStorage.setItem('backgroundColor', userBackgroundColor.value);
+		localStorage.setItem('userBackgroundColor', userBackgroundColor.value);
 	}
 	document.body.style.backgroundColor = userBackgroundColor.value;
+	document.querySelector('#user-reset-settings').style.backgroundColor = userBackgroundColor.value;
 });
 
 let userFontColor = document.querySelector('#user-font-color');
@@ -52,4 +54,9 @@ let userFontFamily = document.querySelector('#user-font-family');
     userFontFamily.addEventListener('keyup',function(){
         document.querySelector('body').style.fontFamily = userFontFamily.value;
         localStorage.setItem('userFontFamily',userFontFamily.value);
-    });
+	});
+	let userResetSettings = document.querySelector('#user-reset-settings');
+		userResetSettings.addEventListener('click',function(){
+			localStorage.clear();
+			location.reload();
+		});
