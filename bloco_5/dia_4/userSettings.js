@@ -1,9 +1,12 @@
+document.querySelector('body').style.fontFamily = localStorage.getItem('userFontFamily');
+document.querySelector('body').style.fontSize = localStorage.getItem('userFontSize');
 document.querySelector('body').style.color = localStorage.getItem(
 	'userFontColor'
 );
 document.querySelector('body').style.backgroundColor = localStorage.getItem(
 	'backgroundColor'
 );
+document.querySelector('body').style.lineHeight = localStorage.getItem('userLineHeight');
 for (
 	let index = 0;
 	index < document.getElementsByTagName('input').length;
@@ -32,3 +35,21 @@ userFontColor.addEventListener('keyup', function () {
 	document.querySelector('body').style.color = userFontColor.value;
 	localStorage.setItem('userFontColor', userFontColor.value);
 });
+
+let userFontSize = document.querySelector('#user-font-size');
+userFontSize.addEventListener('keyup',function(){
+    document.querySelector('body').style.fontSize = userFontSize.value+'px';
+    localStorage.setItem('userFontSize',userFontSize.value+'px');
+});
+
+let userLineHeight = document.querySelector('#user-line-height');
+    userLineHeight.addEventListener('keyup',function(){
+        document.querySelector('body').style.lineHeight = userLineHeight.value;
+        localStorage.setItem('userLineHeight',userLineHeight.value);
+    });
+
+let userFontFamily = document.querySelector('#user-font-family');
+    userFontFamily.addEventListener('keyup',function(){
+        document.querySelector('body').style.fontFamily = userFontFamily.value;
+        localStorage.setItem('userFontFamily',userFontFamily.value);
+    });
