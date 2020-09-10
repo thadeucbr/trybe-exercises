@@ -1,17 +1,22 @@
 .left-content{
     display: inline-block;
-    width: 40%;
+    width: 30%;
     margin: 20px;
     border: black solid thin;
     padding: 10px;
 }
 .right-content{
     display: inline-block;
-    width: 40%;
+    width: 30%;
     margin: 20px;
     border: black solid thin;
     padding: 10px;
 }
 .center-content{
     text-align: center;
+}
+.user-settings{
+    display: inline-block;
+    width: 25%;
+    position: relative;
 }
