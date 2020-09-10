@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho"></div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>
+      <script>
+          console.log(document.querySelector("#elementoOndeVoceEsta"));
+          document.querySelector("#elementoOndeVoceEsta").parentNode.style.backgroundColor = "blue";
+          document.querySelector("#primeiroFilho").innerText = "primeiroFilho";
+          console.log(document.querySelector("#pai").firstChild.nextSibling);
+          console.log(document.querySelector("#elementoOndeVoceEsta").previousSibling.previousSibling);
+          console.log(document.querySelector("#elementoOndeVoceEsta").nextSibling);
+          console.log(document.querySelector("#elementoOndeVoceEsta").nextElementSibling);
+          console.log(document.querySelector("#pai").lastChild.previousElementSibling.previousElementSibling);
+          var irmao = document.createElement("div");
+          irmao.id = "irmao";
+          document.getElementById("pai").appendChild(irmao);
+          console.log(document.getElementById("pai").childNodes);
+          var filhoOndeEstou = document.createElement("div");
+          filhoOndeEstou.id = "filhoOndeEstou";
+          document.getElementById("elementoOndeVoceEsta").appendChild(filhoOndeEstou);
+          console.log(document.getElementById("elementoOndeVoceEsta").childNodes);
+          var filhoDoFilhoDoFilho = document.createElement("div");
+          filhoDoFilhoDoFilho.id = "filhoDoFilhoDoFilho";
+          document.getElementById("primeiroFilhoDoFilho").appendChild(filhoDoFilhoDoFilho);
+          console.log(document.getElementById("primeiroFilhoDoFilho").childNodes);
+          console.log(document.getElementById("filhoDoFilhoDoFilho").parentNode.parentNode.nextElementSibling);
+          document.getElementById("pai").removeChild(terceiroFilho);
+          document.getElementById("pai").removeChild(quartoEUltimoFilho);
+          document.getElementById("elementoOndeVoceEsta").removeChild(primeiroFilhoDoFilho);
+          document.getElementById("pai").removeChild(irmao);
+          console.log(document.getElementById("pai").childNodes);
+      </script>
+</body>
+</html>
