@@ -7,47 +7,87 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<fieldset>
-			<label for="nome">Nome</label>
-			<input type="text" maxlength="40" name="nome" />
+		<div>
+            <form action="teste.php">
+			<fieldset>
+				<label for="nome">Nome</label>
+				<input type="text" maxlength="40" name="nome" required />
 
-			<label for="email">Email</label>
-			<input type="email" name="email" required />
+				<label for="email">Email</label>
+				<input type="email" name="email" required />
 
-			<label for="cpf">Cpf</label>
-			<input type="number" name="cpf" max="11" required />
+				<label for="cpf">Cpf</label>
+				<input type="number" name="cpf" minlength="11" maxlength="11" required />
 
-			<label for="endereco">Endereço</label>
-			<input type="text" name="endereco" maxlength="200" required />
+				<label for="endereco">Endereço</label>
+				<input type="text" name="endereco" maxlength="200" required />
 
-			<label for="cidade">Cidade</label>
-			<input type="text" name="cidade" maxlength="28" required />
+				<label for="cidade">Cidade</label>
+				<input type="text" name="cidade" maxlength="28" required />
 
-			<label for="estado">Estado</label>
-			<select name="estado" id="estado" required>
-				<option selected value="">Selecione</option>
-            </select>
-            <label for="tipo">Tipo</label>
-            <label for="casa">
-            <input type="radio" name="tipo" id="casa" value="casa" required>Casa</label>
-            <label for="apartamento">
-            <input type="radio" name="tipo" id="apartamento" value="apartamento" required>Apartamento</label>
-        </fieldset>
-        
-        <fieldset>
-            <label for="curriculo">Resumo do seu CV</br>
-                <textarea name="curriculo" id="" cols="30" rows="10" maxlength="1000" required></textarea>
-            </label>
-            <label for="cargo">Cargo</label>
-            <input type="text" name="cargo" id="" required maxlength="40">
-            <label for="descricao-cargo">Descrição do cargo
-                <input type="text" name="descricao-cargo" maxlength="40" required id="">
-            </label>
-            <label for="data-inicio">Data de início
-                <input type="text" name="data-inicio" id="data-inicio" placeholder="dd/mm/aaaa" required>
-            </label>
-
-        </fieldset>
+				<label for="estado">Estado</label>
+				<select name="estado" id="estado" required>
+					<option selected value="">Selecione</option>
+				</select>
+				<label for="tipo">Tipo</label>
+				<label for="casa">
+					<input
+						type="radio"
+						name="tipo"
+						id="casa"
+						value="casa"
+						required
+					/>Casa</label
+				>
+				<label for="apartamento">
+					<input
+						type="radio"
+						name="tipo"
+						id="apartamento"
+						value="apartamento"
+						required
+					/>Apartamento</label
+				>
+			</fieldset>
+			<fieldset>
+				<label for="curriculo"
+					>Resumo do seu CV
+					<textarea
+						name="curriculo"
+						id=""
+						cols="30"
+						rows="10"
+						maxlength="1000"
+						required
+					></textarea>
+				</label>
+				<label for="cargo">Cargo</label>
+				<input type="text" name="cargo" id="" required maxlength="40" />
+				<label for="descricao-cargo"
+					>Descrição do cargo
+					<input
+						type="text"
+						name="descricao-cargo"
+						maxlength="40"
+						required
+					/>
+				</label>
+				<label for="data-inicio"
+					>Data de início
+					<input
+						type="text"
+						name="data-inicio"
+						id="data-inicio"
+						placeholder="dd/mm/aaaa"
+                        minlength="11"
+                        maxlength="11"
+                        required
+					/>
+				</label>
+			</fieldset>
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>
