@@ -14,8 +14,8 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="container">
-			<form action="teste.php" class="form">
+		<div class="container center">
+			<form action="teste.php" class="form-group-sm teste">
 				<fieldset>
 					<div class="form-group">
 						<label for="name">Nome</label>
@@ -26,8 +26,6 @@
 							data-validate-field="name"
 							id="name"
 						/>
-					</div>
-					<div class="form-group">
 						<label for="email">Email</label>
 						<input
 							class="form-control form__input form-control"
@@ -35,9 +33,7 @@
 							name="email"
 							data-validate-field="email"
 						/>
-					</div>
-					<div class="form-group">
-						<label for="cpf">Cpf</label>
+						<label for="cpf">CPF</label>
 						<input
 							class="form-control form__input form-control"
 							type="number"
@@ -51,26 +47,21 @@
 							class="form-control form__input form-control"
 							type="text"
 							name="endereco"
-							data-validate-field="text"
+							data-validate-field="address"
 						/>
-					</div>
-					<div class="form-group">
 						<label for="cidade">Cidade</label>
 						<input
 							class="form-control form__input form-control"
 							type="text"
 							name="cidade"
-							data-validate-field="text"
+							data-validate-field="city"
 						/>
-					</div>
-					<div class="form-group">
 						<label for="estado">Estado</label>
-						<select name="estado" id="estado" required>
-							<option selected value="">Selecione</option>
+						<select name="estado" class="form-control" id="estado">
+							<option selected value="" required>Selecione</option>
 						</select>
 					</div>
 					<div class="form-check">
-						
 						<input
 							class="form-check-input form__radio"
 							data-validate-field="radio"
@@ -80,10 +71,9 @@
 							value="casa"
 						/>
 						<label for="casa" class="form-check-label">Casa</label>
-					</div>
-					
-					<div class="form-check">
-						
+
+						<div class="form-check"></div>
+
 						<input
 							class="form-check-input form__radio"
 							data-validate-field="radio"
@@ -98,17 +88,15 @@
 				<fieldset>
 					<div class="form-group">
 						<label for="curriculo"
-							>Resumo do seu CV
+							>Resumo do seu CV</label>
 							<textarea
 								class="form-control"
 								name="curriculo"
 								id=""
-								cols="30"
-								rows="10"
-								maxlength="1000"
+								data-validate-field="resumoCv"
 								required
 							></textarea>
-						</label>
+						
 					</div>
 					<div class="form-group">
 						<label for="cargo">Cargo</label>
@@ -116,36 +104,36 @@
 							class="form-control"
 							type="text"
 							name="cargo"
+							data-validate-field="cargo"
 						/>
 					</div>
 					<div class="form-group">
 						<label for="descricao-cargo"
-							>Descrição do cargo
+							>Descrição do cargo</label>
 							<input
 								class="form-control"
 								type="text"
 								data-validate-field="text"
-								name="descricao-cargo"
-							/>
-						</label>
+								name="descricao-cargo"/>
+						
 					</div>
 					<div class="form-group">
 						<label for="data-inicio"
-							>Data de início
+							>Data de início</label>
 							<input
 								class="form-control"
 								type="text"
 								name="data-inicio"
 								id="data-inicio"
-								required
+								data-validate-field="date"
 							/>
-						</label>
+						
 					</div>
 				</fieldset>
-				<button type="submit" id="enviar">Enviar</button>
+				<button type="submit" class="btn btn-primary">Enviar</button>
 			</form>
 		</div>
-		<script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+		<script src="node_modules/just-validate/dist/js/just-validate.js"></script>
 		<script src="dist/js/DatePickerX.min.js"></script>
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

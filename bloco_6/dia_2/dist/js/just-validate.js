@@ -344,10 +344,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.tooltipSelectorWrap = document.querySelectorAll(this.tooltip.selectorWrap).length ? document.querySelectorAll(this.tooltip.selectorWrap) : document.querySelectorAll('.just-validate-tooltip-container');
         this.bindHandlerKeyup = this.handlerKeyup.bind(this);
         this.submitHandler = this.options.submitHandler || undefined;
-        this.invalidFormCallback = this.options.invalidFormCallback || undefined;
         this.promisesRemote = [];
         this.isValidationSuccess = false;
-        this.focusWrongField = this.options.focusWrongField || false;
         this.REGEXP = {
             // eslint-disable-next-line max-len
             email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -373,7 +371,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             name: {
                 required: true,
                 minLength: 3,
-                maxLength: 25
+                maxLength: 15
             },
             text: {
                 required: true,
@@ -392,26 +390,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             },
             phone: {
                 phone: true
-            },
-            document: {
-                required: true,
-                minLength: 11,
-                maxLength: 11
-            },
-            date: {
-                required: true
-            },
-            city: {
-                required: true
-            },
-            address: {
-                required: true
-            },
-            selector: {
-                required: true
-            },
-            radio: {
-                required: true
             }
         },
 
@@ -425,7 +403,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             strength: 'Password must contents at least one uppercase letter, one lowercase letter and one number',
             function: 'Function returned false'
         },
-
         /**
          * Keyup handler
          * @param ev
@@ -481,18 +458,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             return result;
         },
 
-        validationFailed: function validationFailed() {
-            if (this.invalidFormCallback) {
-                this.invalidFormCallback(this.result);
-            }
-
-            var $firstErrorField = document.querySelector('.js-validate-error-field');
-
-            if (this.focusWrongField && $firstErrorField && $firstErrorField.focus) {
-                $firstErrorField.focus();
-            }
-        },
-
         validationSuccess: function validationSuccess() {
             if (Object.keys(this.result).length === 0) {
                 this.isValidationSuccess = false;
@@ -519,8 +484,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 if (!_this.promisesRemote.length) {
                     if (_this.isValidationSuccess) {
                         _this.validationSuccess();
-                    } else {
-                        _this.validationFailed();
                     }
                     return;
                 }
@@ -530,8 +493,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
                     if (_this.isValidationSuccess) {
                         _this.validationSuccess();
-                    } else {
-                        _this.validationFailed();
                     }
                 });
             });

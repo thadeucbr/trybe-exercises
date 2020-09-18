@@ -7,39 +7,18 @@ function gerarListaDeEstados() {
 		document.getElementById('estado').appendChild(option);
 	}
 }
-new JustValidate('.form', {
-	Rules: {
-		document: {
+
+new window.JustValidate('.teste', {
+	rules: {
+		cargo: {
 			required: true,
-			maxLength: 300,
 			minLength: 5,
+			maxLength: 30,
 		},
-		email: {
+		resumoCv: {
 			required: true,
-			email: true,
-		},
-		checkbox: {
-			required: true,
-		},
-		name: {
-			required: true,
-			minLength: 3,
-			maxLength: 40,
-		},
-		text: {
-			required: true,
-			maxLength: 300,
-			minLength: 5,
-		},
-		password: {
-			required: true,
-			password: true,
-			minLength: 4,
-			maxLength: 8,
-		},
-		zip: {
-			required: true,
-			zip: true,
+			minLength: 50,
+			maxLength: 1000,
 		},
 	},
 });

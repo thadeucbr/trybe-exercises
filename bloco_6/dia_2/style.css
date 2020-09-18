@@ -1,0 +1,13 @@
+body{
+    background-color: aliceblue;
+}
+input{
+    background-color: beige;
+}
+.teste{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 7%;
+
+}
