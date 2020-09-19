@@ -22,5 +22,6 @@ new window.JustValidate('.teste', {
 		},
 	},
 });
-document.getElementById('data-inicio').DatePickerX.init();
+
+document.getElementById('data-inicio').DatePickerX.init({format:'dd/mm/yyyy'});
 window.onload = gerarListaDeEstados();
