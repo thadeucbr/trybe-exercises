@@ -23,5 +23,27 @@ new window.JustValidate('.teste', {
 	},
 });
 
-document.getElementById('data-inicio').DatePickerX.init({format:'dd/mm/yyyy'});
+document
+	.getElementById('data-inicio')
+	.DatePickerX.init({
+		format: 'dd/mm/yyyy',
+		mondayFirst: false,
+		weekDayLabels: ['Seg', 'Terç', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+		singleMonthLabels: [
+			'Janeiro',
+			'Fevereiro',
+			'Março',
+			'Abril',
+			'Maio',
+			'Junho',
+			'Julho',
+			'Agosto',
+			'Setembro',
+			'Outubro',
+			'Novembro',
+			'Dezembro',
+		],
+		todayButtonLabel: 'Hoje',
+		clearButtonLabel: 'Limpar'
+	});
 window.onload = gerarListaDeEstados();
