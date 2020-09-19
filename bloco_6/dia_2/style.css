@@ -1,13 +1,6 @@
-body{
-    background-color: aliceblue;
+.formulario {
+    margin-top: 40px;
 }
-input{
-    background-color: beige;
-}
-.teste{
-    margin-top: 20px;
-    padding: 20px;
-    background-color: lightblue;
-    border-radius: 7%;
-
+.botao{
+    margin-top: 15px;
 }
