@@ -6,3 +6,9 @@ function findLongestWord(str){
 };
 
 findLongestWord('Essa maracutaia maluca');
+
+let clickCounter = 0;
+document.getElementById('button').addEventListener('click', () => {
+    clickCounter += 1;
+    document.getElementById('clicks').innerText = `Clicks: ${clickCounter}`;
+})
