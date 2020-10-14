@@ -63,12 +63,11 @@ const books = [
   },
 ];
 
-const expected_result = 'O Senhor dos Anéis';
+const expected_result = 43;
 
-function authorWith3DotsOnName() {
-  // escreva seu código aqui
-  let author = books.map((author) => author.author.name.startsWith('R'));
-  return author
+function averageAge() {
+  let result = books.reduce((acc, author) => acc += (author.releaseYear - author.author.birthYear) / books.length,0);
+  return parseFloat(result).toFixed();
 }
 
-assert.deepEqual(authorWith3DotsOnName(), expected_result);
+assert.equal(averageAge(), expected_result);

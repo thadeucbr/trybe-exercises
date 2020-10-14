@@ -69,11 +69,11 @@ const expected_result = [
   'Isaac Asimov',
   'J. R. R. Tolkien'
 ]
-fantasyOrScienceFictionAuthors()
+
 function fantasyOrScienceFictionAuthors() {
-  // escreva seu código aqui
-  let author = books.filter((book) => (book.genre === 'Ficção Científica' || book.genre ==='Fantasia'));
-  return author.map((author) => author.author.name).sort()
+  return books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia')
+  .map((author) => author.author.name)
+  .sort();
 }
 
 assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);

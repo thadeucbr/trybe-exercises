@@ -9,10 +9,7 @@ const arrays = [
 
 
 function flatten() {
-  // escreva seu código aqui
-  return arrays.reduce((previousValue, currentValue) => {
-      return previousValue.concat(currentValue);
-  },[])
+  return arrays.reduce((array, item) => array.concat(item),[])
 }
 
 assert.deepEqual(flatten(), ["1", "2", "3", true, 4, 5, 6]);

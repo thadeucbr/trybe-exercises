@@ -1,6 +1,5 @@
     
 const assert = require('assert');
-const { get } = require('http');
 
 const books = [
   {
@@ -65,13 +64,12 @@ const books = [
   },
 ];
 
-const names = books.map((author, index, array) => index === array.length -1 ? `${author.author.name}.`:`${author.author.name}, `)
-.reduce((author, list) => author.concat(list), 'Nomes: ');
-
 
 function allNames() {
-  // escreva seu código aqui
-  return names;
+  return books.reduce(
+      (acc, name, index, array) => 
+        index !== array.length -1 ? 
+            acc + `${name.author.name}, ` : acc + `${name.author.name}.`,'Nomes: ')
 }
-console.log(names);
+
 assert.deepEqual(allNames(), "Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");

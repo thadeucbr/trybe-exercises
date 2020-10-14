@@ -1,35 +1,85 @@
-const arrayNumeros = [2,5,8,10];
-let teste = arrayNumeros.reduce((armazenagem, array) => armazenagem += array , 0)
+const estudantes = [
+    {
+      nome: 'Jorge',
+      sobrenome: 'Silva',
+      idade: 14,
+      turno: 'Manhã',
+      materias: [
+        { name: 'Matemática', nota: 67 },
+        { name: 'Português', nota: 79 },
+        { name: 'Química', nota: 70 },
+        { name: 'Biologia', nota: 65 }
+      ]
+    },
+    {
+      nome: 'Mario',
+      sobrenome: 'Ferreira',
+      idade: 15,
+      turno: 'Tarde',
+      materias: [
+        { name: 'Matemática', nota: '59' },
+        { name: 'Português', nota: '80' },
+        { name: 'Química', nota: '78' },
+        { name: 'Biologia', nota: '92' }
+      ]
+    },
+    {
+      nome: 'Jorge',
+      sobrenome: 'Santos',
+      idade: 15,
+      turno: 'Manhã',
+      materias: [
+        { name: 'Matemática', nota: '76' },
+        { name: 'Português', nota: '90' },
+        { name: 'Química', nota: '70' },
+        { name: 'Biologia', nota: '80' }
+      ]
+    },
+    {
+      nome: 'Maria',
+      sobrenome: 'Silveira',
+      idade: 14,
+      turno: 'Manhã',
+      materias: [
+        { name: 'Matemática', nota: '91' },
+        { name: 'Português', nota: '85' },
+        { name: 'Química', nota: '92' },
+        { name: 'Biologia', nota: '90' }
+      ]
+    },
+    {
+      nome: 'Natalia',
+      sobrenome: 'Castro',
+      idade: 14,
+      turno: 'Manhã',
+      materias: [
+        { name: 'Matemática', nota: '70' },
+        { name: 'Português', nota: '70' },
+        { name: 'Química', nota: '60' },
+        { name: 'Biologia', nota: '50' }
+      ]
+    },
+    {
+      nome: 'Wilson',
+      sobrenome: 'Martins',
+      idade: 14,
+      turno: 'Manhã',
+      materias: [
+        { name: 'Matemática', nota: '80' },
+        { name: 'Português', nota: '82' },
+        { name: 'Química', nota: '79' },
+        { name: 'Biologia', nota: '75' }
+      ]
+    },
+  ]
 
-const arrayPessoas = [
-    {
-        nome: 'Pedro',
-        idade: 99,
-    },
-    {
-        nome: 'Joaquim',
-        idade: 15,
-    },
-    {
-        nome: 'Cirilo',
-        idade: 13,
-    },
-    {
-        nome: 'Wilson',
-        idade: 10,
-    },
-    {
-        nome: 'Andressa',
-        idade: 28,
-    },
-    {
-        nome: 'Wagner',
-        idade: 24,
-    },
-];
+  let topClass = estudantes.map((estudante) => {
+      return {
+          name: estudante.nome,
+          materia: estudante.materias
+            .reduce(
+                (acc, materia) => acc.nota > materia.nota ? acc.name : materia.name)
+      }
+  })
 
-let listaFaixaEtaria = arrayPessoas.reduce((faixaEtaria, pessoas) => {
-    let pessoa = pessoas.idade >= 18 ? 'maiores' : 'menores';
-    faixaEtaria[pessoa].push(pessoas);
-    return faixaEtaria;
-}, {maiores:[],menores:[]});
+  topClass

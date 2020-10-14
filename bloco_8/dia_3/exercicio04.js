@@ -72,16 +72,9 @@ const expected_result = {
   name: 'As Crônicas de Gelo e Fogo',
   releaseYear: 1991
 };
-longestNamedBook()
-let ifBigger = (array) => array.map((bookName) => bookName.name).reduce((firstBook, secondBook) => {
-    if(secondBook > firstBook){
-        return firstBook;
-    }
-})
+
 function longestNamedBook() {
-  // escreva seu código aqui
-  ifBigger(books);
-  books.map((firstBook) => firstBook.name === firstBookname ? firstBook:firstBook)
+  return books.reduce((acc, nameBook) => acc.name.length > nameBook.name.length ? acc : nameBook)
 }
 
-//assert.deepEqual(longestNamedBook(), expected_result);
+assert.deepEqual(longestNamedBook(), expected_result);

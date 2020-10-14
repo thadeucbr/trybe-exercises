@@ -89,14 +89,16 @@ const expected_result = [
     author: 'J. R. R. Tolkien'
   }
 ];
-nameAndAge();
+
 function nameAndAge() {
-  // escreva seu código aqui
-  let authors = books.map((authorS) => ({
-    age: authorS.releaseYear - authorS.author.birthYear,
-    author: authorS.author.name
-  }));
-  return authors.sort((a,b) => a.age - b.age);
+    let novoAutor;
+  novoAutor = books.map((author) => {
+      return {
+          age: author.releaseYear - author.author.birthYear,
+          author: author.author.name
+      }
+  })
+  return novoAutor.sort((a, b) => a.age - b.age);
 }
 
 assert.deepEqual(nameAndAge(), expected_result);

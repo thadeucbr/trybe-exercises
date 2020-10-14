@@ -1,18 +1,17 @@
+    
 const assert = require('assert');
 
 const alunos = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
 const notas = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
+
 function studentAverage() {
-   const notaMedia = notas.map((notas, index) => {
-   const somatorio = notas.reduce((accumulator, somaNotas) => accumulator + somaNotas);
-   const media = somatorio / notas.length;
-   return {
-       name: alunos[index],
-       average: media
-   }
-  });
-  return notaMedia
+  return alunos.map((aluno, index) => {
+      return {
+          name: aluno,
+          average: (notas[index].reduce((res, sum) => res += sum) / notas[index].length)
+      }
+  })
 }
 
 const expected = [
