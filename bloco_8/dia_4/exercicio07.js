@@ -17,6 +17,8 @@ const ships = [
     }
 ]
 
+// escreva shipLength abaixo
+const {name, length, measurementUnit} = ships;
 const shipLength = ({name, length, measurementUnit = 'meters'}) => `${name} is ${length} ${measurementUnit} long`
 
 assert.equal(shipLength(ships[0]), "Titanic is 269.1 meters long")
