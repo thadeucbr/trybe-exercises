@@ -15,10 +15,13 @@ const obj3 = {
   description: 'My Description',
 };
 
-test('Obj1 deve ser igual ao Obj2', () => {
+describe('Compare objects', () => {
+  test('Obj1 should be equal to Obj2', () => {
     expect(obj1).toEqual(obj2);
 })
 
-test('Obj1 deve ser diferente do Obj3', () => {
+test('Obj1 must be different to Obj3', () => {
     expect(obj2).not.toEqual(obj3);
+})
+
 })
