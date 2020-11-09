@@ -1,8 +1,11 @@
+import data from './data'
 import Pokedex from './pokedex'
-import pokemons from './data'
 function App() {
   return (
-    <Pokedex value={pokemons} />
+    <div>
+      <h1 className='title'>Pokedex</h1>
+      <Pokedex value={data} />
+    </div>
   )
 }
 

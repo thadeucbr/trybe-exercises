@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import Pokemon from './pokemonk'
 import './pokedex.css'
+const { Component } = require("react");
+const { default: Pokemon } = require("./pokemon");
 class Pokedex extends Component {
-    render() {
+    render(){
         return (
-            <div className= 'content'>
-                {this.props.value.map(pokemon => <Pokemon value = {pokemon} />)}
+            <div className='pokedex'>
+                {this.props.value.map(pokemons => <Pokemon value={pokemons} key={pokemons.name} />)}
             </div>
         )
     }
 }
 
-export default Pokedex
+export default Pokedex;
