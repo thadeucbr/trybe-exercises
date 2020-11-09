@@ -1,0 +1,14 @@
+.content {
+    background-color: rgb(240, 240, 240);
+    border-color: darkgray;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    padding: 5px 15px;
+    margin: 10px;
+}
+
+.pokemon-info {
+    width: 200px;
+}
