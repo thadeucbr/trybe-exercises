@@ -1,29 +1,40 @@
+import PropTypes from "prop-types";
 import React, { Component } from 'react';
-import Name from './Name';
+import Email from './components/Email';
+import Name from './components/Name';
 class Form extends Component {
     constructor(props){
         super(props)
-        this.stateHandler = this.stateHandler.bind(this);
+        this.stateHandler = this.stateHandler.bind(this)
         this.state = {
-            email: '',
-            name: ''
+            firstName: '',
+            lastName: '',
+            email: ''
         }
     }
     stateHandler({target}){
         const {name, value} = target;
-        this.setState({[name]: value})
+        this.setState({[name]: value});
     }
     render(){
+        const {updateForm} = this.props;
+        const {firstName, lastName, email} = this.state;
         return (
             <div>
                 <fieldset>
-                    <form>
-                        <Name value={this.state.name} stateHandler={this.stateHandler} />
+                    <form className='form'>
+                        <Name firstName={firstName} lastName={lastName} stateHandler={this.stateHandler} />
+                        <Email email={email} stateHandler={this.stateHandler} />
                     </form>
+                        <button onClick={() => updateForm(this.state)} />
                 </fieldset>
             </div>
         )
     }
+}
+
+Form.propTypes = {
+  updateForm: PropTypes.func
 }
 
 export default Form;
