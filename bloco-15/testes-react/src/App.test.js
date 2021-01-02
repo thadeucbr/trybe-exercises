@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('Verifica se existe um input de email na tela', () => {
+  // acessar elementos na tela
+  const { getByPlaceholderText } = render(<App />);
+  const inputEmail = getByPlaceholderText(/email/i);
+
+  expect(inputEmail).toBeInTheDocument();
+  // interagir com os elementos
+
+  // fazer o teste
 });
