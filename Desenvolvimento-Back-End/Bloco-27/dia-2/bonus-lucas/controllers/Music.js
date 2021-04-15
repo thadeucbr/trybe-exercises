@@ -10,6 +10,15 @@ const getAll = async (_req, res) => {
     }
 }
 
+const joinMusics = async (_req, res) => {
+  try {
+    const result = await Music.joinMusics();
+    res.status(200).json(result)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const create = async (req, res) => {
     try {
       const { name, album } = req.body;
@@ -56,5 +65,6 @@ module.exports = {
   create,
   updateMusic,
   updateAlbum,
-  remove
+  remove,
+  joinMusics
 }

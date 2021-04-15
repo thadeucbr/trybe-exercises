@@ -19,7 +19,9 @@ app.route('/music')
 
 app.put('/music/:oldAlbum', Music.updateAlbum)
 
-const PORT = 3001;
+app.get('/teste', Music.joinMusics);
+
+const PORT = 3000;
 app.listen(PORT, () => {
   console.info(`Aplicação rodando na porta ${PORT}`)
 })

@@ -10,6 +10,15 @@ const getAll = async () => {
   }
 }
 
+const joinMusics = async () => {
+  try {
+    const result = await Music.joinMusics();
+    return result;
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const create = async (name, album) => {
   try {
     if(!name || !album) return {message: "O nome da musica e do album são obrigatorios"}
@@ -55,5 +64,6 @@ module.exports = {
   create,
   updateMusic,
   updateAlbum,
-  remove
+  remove,
+  joinMusics
 }

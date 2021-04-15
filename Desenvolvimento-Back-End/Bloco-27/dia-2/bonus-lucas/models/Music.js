@@ -42,6 +42,23 @@ const updateAlbum = async (oldAlbum, album) => {
   }
 };
 
+const joinMusics = async () => {
+  try {
+    const query = await connection()
+    .then(db => {
+      db.collection('artists')
+      .aggregate([
+        {
+          $unionWith: {coll: "songs"}
+        }
+      ])
+    })
+    return query;
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const remove = async (name) => {
   try {
     const query = await connection()
@@ -58,5 +75,6 @@ module.exports = {
   create,
   updateAlbum,
   updateMusic,
-  remove
+  remove,
+  joinMusics
 };
