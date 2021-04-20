@@ -1,5 +1,5 @@
-![alt text](./Images/bannerTrybe.png)
-# Repositório dos projetos desenvolvidos durante o curso de formação da Trybe
+![alt text](https://github.com/thadeucbr/Projetos-Trybe/blob/main/Images/bannerTrybe.png?raw=true)
+# Repositório dos exercicios realizados durante o curso de formação da Trybe
 
 <h3> Sobre a Trybe </h3>
 
@@ -7,7 +7,7 @@ A [Trybe](https://www.betrybe.com) é uma escola de desenvolvimento web que tem 
 
 <hr>
 
-Ao longo do período de formação foram sendo desenvolvidos vários projetos. As especificações de cada projeto encontram-se nos seus respectivos readme.
+Ao longo do período de formação foram sendo desenvolvidos vários exercicios. As especificações de cada exercicio encontram-se nos seus respectivos readme.
 
 Em cada um dos quatro módulos do curso são abordados algumas temáticas descritas a seguir
 
