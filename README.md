@@ -1,5 +1,5 @@
-![alt text](./Images/bannerTrybe.png)
-# Repositório dos projetos desenvolvidos durante o curso de formação da Trybe
+![alt text](https://github.com/thadeucbr/Projetos-Trybe/blob/main/Images/bannerTrybe.png?raw=true)
+# Repositório dos exercicios realizados durante o curso de formação da Trybe
 
 <h3> Sobre a Trybe </h3>
 
@@ -7,13 +7,13 @@ A [Trybe](https://www.betrybe.com) é uma escola de desenvolvimento web que tem 
 
 <hr>
 
-Ao longo do período de formação foram sendo desenvolvidos vários projetos. As especificações de cada projeto encontram-se nos seus respectivos readme.
+Ao longo do período de formação foram sendo desenvolvidos vários exercicios. As especificações de cada exercicio encontram-se nos seus respectivos readme.
 
 Em cada um dos quatro módulos do curso são abordados algumas temáticas descritas a seguir
 
-Módulo 1 - **Fundamentos do Desenvolvimento Web**: O objetivo deste primeiro módulo é construir os fundamentos necessários para o início no mundo Desenvolvimento Web.
+✔️ Módulo 1 - **Fundamentos do Desenvolvimento Web**: O objetivo deste primeiro módulo é construir os fundamentos necessários para o início no mundo Desenvolvimento Web.
 
-Módulo 2 - **Desenvolvimento Front-end**: Aqui você vai aprender as técnicas e ferramentas mais atuais para desenvolver um código de front-end que seja rápido, bonito e testável.
+✔️ Módulo 2 - **Desenvolvimento Front-end**: Aqui você vai aprender as técnicas e ferramentas mais atuais para desenvolver um código de front-end que seja rápido, bonito e testável.
 
 Módulo 3 - **Desenvolvimento Back-end**: Neste módulo, você vai aprender como desenvolver um código de back-end robusto, limpo, escalável e seguro, dominando o uso de bancos de dados, a construção de APIs com testes automatizados.
 
