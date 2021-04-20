@@ -11,9 +11,9 @@ Ao longo do período de formação foram sendo desenvolvidos vários exercicios.
 
 Em cada um dos quatro módulos do curso são abordados algumas temáticas descritas a seguir
 
-Módulo 1 - **Fundamentos do Desenvolvimento Web**: O objetivo deste primeiro módulo é construir os fundamentos necessários para o início no mundo Desenvolvimento Web.
+✔️ Módulo 1 - **Fundamentos do Desenvolvimento Web**: O objetivo deste primeiro módulo é construir os fundamentos necessários para o início no mundo Desenvolvimento Web.
 
-Módulo 2 - **Desenvolvimento Front-end**: Aqui você vai aprender as técnicas e ferramentas mais atuais para desenvolver um código de front-end que seja rápido, bonito e testável.
+✔️ Módulo 2 - **Desenvolvimento Front-end**: Aqui você vai aprender as técnicas e ferramentas mais atuais para desenvolver um código de front-end que seja rápido, bonito e testável.
 
 Módulo 3 - **Desenvolvimento Back-end**: Neste módulo, você vai aprender como desenvolver um código de back-end robusto, limpo, escalável e seguro, dominando o uso de bancos de dados, a construção de APIs com testes automatizados.
 
