@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO - trybe</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font: 13px Helvetica, Arial;
+      }
+      form {
+        background: #000;
+        padding: 3px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      form input {
+        border: 0;
+        padding: 10px;
+        width: 90%;
+        margin-right: 0.5%;
+      }
+      form button {
+        width: 9%;
+        background: rgb(130, 224, 255);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      #mensagens {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      #mensagens li {
+        padding: 5px 10px;
+      }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <ul id="mensagens"></ul>
+    <form action="">
+      <input id="mensagemInput" autocomplete="off" /><button>Send</button>
+    </form>
+    <script>
+      let userId = '';
+      const socket = io();
+      // socket.emit('login', 'Thadeu');
+      // let user = ''
+      // socket.on('user', (name) => user = name);
+      const form = document.querySelector('form')
+      const inputMessage = document.querySelector('#mensagemInput')
+      form.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        socket.emit('mensagem', inputMessage.value);
+        inputMessage.value = '';
+        return false;
+      });
+      const messageTimestamp = () => {
+        const date = new Date();
+        return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+      };
+      const createMessage = (objetao) => {
+        const messagesUl = document.querySelector('#mensagens');
+        const header = document.createElement('li');
+        const message = document.createElement('li');
+        if(objetao.user === userId) {
+          message.style.backgroundColor = 'red';
+          header.style.backgroundColor = 'red';
+        }
+        if(objetao.user === undefined) message.style.backgroundColor = 'green';
+        header.innerText = `${messageTimestamp()} ${objetao.user}:` ;
+        message.innerText = objetao.mensagem;
+        if(objetao.user) messagesUl.appendChild(header)
+        messagesUl.appendChild(message);
+      };
+      console.log(userId);
+      // socket.on('ola', (mensagem) => createMessage(mensagem));
+      socket.on('ola', (id) => userId = id);
+      socket.on('mensagemServer', (mensagem) => createMessage(mensagem));
+    </script>
+  </body>
+</html>
