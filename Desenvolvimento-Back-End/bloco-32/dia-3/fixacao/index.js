@@ -13,7 +13,7 @@ app.use(cors())
 
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile('/index.html', { root: '../' });
 });
 
 io.on("connection", (socket) => {
@@ -33,6 +33,7 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(3000, () => {
-  console.log('Servidor ouvindo na porta 3000');
+const PORT = process.env.PORT || 3000
+http.listen(PORT, () => {
+  console.log(`Servidor ouvindo na porta ${PORT}`);
 });

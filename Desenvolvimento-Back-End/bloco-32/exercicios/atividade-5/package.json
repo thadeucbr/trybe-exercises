@@ -1,0 +1,14 @@
+{
+  "name": "atividade-5",
+  "version": "1.0.0",
+  "description": "![prototipo](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/nodejs/socketio-practicing/images/Reacao-video-c99e41020aef2b736cb8ae74028aad21.png)",
+  "main": "./server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "(cd ./client npm start)",
+    "start": "npm run client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
